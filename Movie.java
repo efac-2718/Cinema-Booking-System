@@ -4,7 +4,7 @@ public class Movie {
     private int duration;
     private String date;
     private String time;
-    private Screen screen = new Screen("K-zone","Kandana",4);
+    private Screen screen = new Screen("K-zone","Kandana",4, 2000,10,10);
 
     public Movie(String name,int duration,String date,String time){
         this.name = name;
@@ -30,4 +30,15 @@ public class Movie {
         return duration;
     }
 
+    public Screen getScreen(){
+        return screen;
+    }
+
+    public double getPrice(){
+        Screen screen1 = getScreen();
+        return screen1.getPrice();
+    }
+
+
 }
+

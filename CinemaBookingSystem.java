@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class CinemaBookingSystem {
 
-    private ArrayList<Movie> movies ;
+    private static ArrayList<Movie> movies ;
     private Movie sampleMovie1;      //This is created only for the purpose of initialisation and to avoid error of empty collection
 
     public CinemaBookingSystem(){
@@ -14,7 +14,7 @@ public class CinemaBookingSystem {
         movies.add(movie);
     }
 
-    public Movie findMovie(String name){
+    public static Movie findMovie(String name){
         for(Movie s: movies){
             if(s.getName().equals(name)){
                 System.out.println("The movie "+ name + " Exists");
@@ -29,3 +29,4 @@ public class CinemaBookingSystem {
         movies.remove(findMovie(name));
     }
 }
+
